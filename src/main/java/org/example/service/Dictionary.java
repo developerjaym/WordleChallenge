@@ -31,7 +31,7 @@ public class Dictionary {
         return INSTANCE;
     }
 
-    public boolean isValidWord(String wordToCheck) {
+    public boolean exists(String wordToCheck) {
         String firstLetter =
                 Optional.ofNullable(wordToCheck).filter(word -> word.length() > 0).map(word -> word.substring(0, 1)).orElse(null);
 
