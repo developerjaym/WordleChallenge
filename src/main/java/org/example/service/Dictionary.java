@@ -56,8 +56,6 @@ public class Dictionary {
         System.out.println(LocalTime.now() + "--- Fetching words that start with '" + startingLetter + "'");
         startingLetter = startingLetter.toLowerCase();
         try {
-            Thread.sleep(5_000); // simulate a slower connection
-
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create("https://localstorage.tools/game/word/dictionary/" + startingLetter + ".txt"))
                     .build();
